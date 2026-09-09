@@ -1,6 +1,6 @@
-# Contributing to OpenSignal
+# Contributing to OpenRoad Data Tools
 
-Thank you for your interest in contributing to OpenSignal! This document outlines the process for contributing to this traffic signal configuration tool.
+Thank you for your interest in contributing to OpenRoad Data Tools! This document outlines the process for contributing to this map-point collection tool.
 
 ## Development Setup
 
@@ -13,8 +13,8 @@ Thank you for your interest in contributing to OpenSignal! This document outline
 1. Fork the repository on GitHub
 2. Clone your fork locally:
    ```bash
-   git clone https://github.com/your-username/opensignal.git
-   cd opensignal
+   git clone https://github.com/redmond2742/OpenRoad-Data-Tools.git
+   cd OpenRoad-Data-Tools
    ```
 3. Install dependencies:
    ```bash
@@ -37,22 +37,22 @@ Thank you for your interest in contributing to OpenSignal! This document outline
 
 ### Component Architecture
 - Place reusable UI components in `client/src/components/ui/`
-- Place domain-specific components in `client/src/components/gtss/`
+- Place domain-specific components in `client/src/components/openroad/`
 - Use shadcn/ui components as base building blocks
 - Follow the existing pattern for form handling with React Hook Form + Zod
 
 ### Data Management
-- All data operations should use the localStorage service (`packages/gtss/localStorage.ts`)
-- Create corresponding React hooks in `packages/gtss/localStorageHooks.ts`
+- All data operations should use the localStorage service (`packages/openroad/localStorage.ts`)
+- Create corresponding React hooks in `packages/openroad/localStorageHooks.ts`
 - Update Zustand store for UI state management
-- Maintain type safety with shared schemas in `packages/gtss/schema/schema.ts`
+- Maintain type safety with shared schemas in `packages/openroad/schema/schema.ts`
 
 ### Testing Your Changes
 - Test functionality across different browsers (Chrome, Firefox, Safari, Edge)
 - Verify responsive design on mobile devices
 - Test data persistence across browser sessions
 - Ensure all forms validate properly
-- Test export functionality generates valid GTSS files
+- Test export functionality generates a valid points.csv
 
 ## Contribution Process
 
@@ -95,15 +95,15 @@ Thank you for your interest in contributing to OpenSignal! This document outline
 
 ### Medium Priority  
 - **Data Validation**: Enhanced form validation and error messages
-- **Export Formats**: Additional export formats beyond GTSS CSV
+- **Export Formats**: Additional export formats beyond CSV (GeoJSON, KML, GPX)
 - **Documentation**: Tutorials, guides, and API documentation
 - **Internationalization**: Multi-language support
 
 ### Future Features
 - **Collaborative Editing**: Multiple users working on same project
 - **Version Control**: Data versioning and rollback capabilities
-- **Import Functionality**: Import from other traffic signal systems
-- **Advanced Analytics**: Signal timing analysis and optimization
+- **Import Functionality**: Import from other geospatial formats
+- **Advanced Analytics**: Spatial summaries and distance calculations across points
 
 ## Code Review Process
 
@@ -146,4 +146,4 @@ If you have questions about contributing:
 2. Create a new Discussion for general questions
 3. Create an Issue for specific bugs or feature requests
 
-Thank you for helping make OpenSignal better for the traffic engineering community!
+Thank you for helping make OpenRoad Data Tools better!

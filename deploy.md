@@ -1,10 +1,10 @@
-# Deployment Guide for OpenSignal
+# Deployment Guide for OpenRoad Data Tools
 
-This guide provides step-by-step instructions for deploying OpenSignal to various hosting platforms. Since OpenSignal v2.0 runs entirely in the browser with localStorage, it can be deployed as a static website.
+This guide provides step-by-step instructions for deploying OpenRoad Data Tools to various hosting platforms. Since OpenRoad Data Tools runs entirely in the browser with localStorage, it can be deployed as a static website.
 
 ## Quick Start
 
-OpenSignal requires only static file hosting since it operates entirely in the browser:
+OpenRoad Data Tools requires only static file hosting since it operates entirely in the browser:
 
 1. **Build the application**: `npm run build`
 2. **Deploy the `dist` folder** to any static hosting service
@@ -20,7 +20,7 @@ Netlify provides excellent static hosting with automatic deployments from GitHub
 1. **Connect Repository**:
    - Go to [Netlify](https://netlify.com) and sign in
    - Click "New site from Git"
-   - Connect your GitHub account and select the OpenSignal repository
+   - Connect your GitHub account and select the OpenRoad Data Tools repository
 
 2. **Configure Build Settings**:
    - Build command: `npm run build`
@@ -50,7 +50,7 @@ Vercel offers seamless deployment with automatic optimizations.
 1. **Import Project**:
    - Go to [Vercel](https://vercel.com) and sign in
    - Click "New Project"
-   - Import your OpenSignal repository from GitHub
+   - Import your OpenRoad Data Tools repository from GitHub
 
 2. **Configure Settings**:
    - Framework Preset: Vite
@@ -122,7 +122,7 @@ GitHub Pages provides free hosting directly from your repository.
 3. **Deploy**:
    - Push to main branch
    - GitHub Actions will automatically build and deploy
-   - Site will be available at `https://your-username.github.io/opensignal`
+   - Site will be available at `https://your-username.github.io/OpenRoad-Data-Tools`
 
 ### Self-Hosted Options
 
@@ -280,7 +280,7 @@ Consider adding error tracking:
 
 ## Security Considerations
 
-Since OpenSignal runs entirely in the browser:
+Since OpenRoad Data Tools runs entirely in the browser:
 - **Data Privacy**: All data stays in user's browser localStorage
 - **HTTPS**: Always deploy with SSL/TLS encryption
 - **Content Security Policy**: Consider adding CSP headers
@@ -289,9 +289,9 @@ Since OpenSignal runs entirely in the browser:
 ## Backup and Migration
 
 ### Data Export
-Users can export their GTSS data at any time:
+Users can export their point data at any time:
 1. Use the Export tab in the application
-2. Download ZIP file containing all signal data
+2. Download `points.csv`, on its own or inside a ZIP
 3. Store backups of exported data files
 
 ### Browser Data Migration

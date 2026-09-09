@@ -1,9 +1,55 @@
 # Changelog
 
-All notable changes to OpenSignal will be documented in this file.
+All notable changes to OpenRoad Data Tools will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [3.0.0] - 2026-09-08
+
+### Major Changes
+- **BREAKING**: Reworked from GTSS Builder, a traffic-signal configuration tool, into OpenRoad Data
+  Tools, a general map-point collector
+- **BREAKING**: Export format is now a single `points.csv` instead of the six-file GTSS TXT package
+- **BREAKING**: The `gtss` package is now `openroad`; imports change from `from "gtss"` to
+  `from "openroad"`
+
+### Added
+- Click anywhere on the map to drop a point, with a toggle to disarm it while panning
+- Draggable markers that write their new coordinates back as you move them
+- Compass direction per point — NB/SB/EB/WB or an exact bearing — shown as a pin that points along
+  the heading, drawn at a fixed pixel size so it stays readable at every zoom
+- Two-click point placement: the first map click drops the pin, the second says where traffic comes
+  from and sets the bearing, with a dashed preview line while choosing (Esc or Skip to leave it unset)
+- Optional description and distance (ft) fields, distance defaulting to 0
+- Unique point IDs as an alternative to sequential numbering, for merging datasets from different
+  people without collisions
+- Sequential IDs backed by a persistent high-water mark, so a deleted number is never reused
+- Lenient CSV import: alternate column names (`lat`, `lon`, `Distance (ft)`, `ID#` …) and headerless
+  files in canonical column order
+- Generic CSV importer with a column-mapping step: any spreadsheet can be imported by saying what each
+  column means, ignoring the ones that aren't needed, or combining several into ID or Description
+  (each with its own joining string), with a live preview of the first rows as they will be imported
+- Direction values understood as words (`Northbound`, `west`) and intercardinals (`NE` -> 45) as well
+  as codes and bearings
+- Confirmation dialog for point deletion
+
+### Removed
+- Agency, signal, approach, phase, detector and basic-timing entities, and every screen that edited
+  them
+- Phase diagrams, free-right markings, crosswalk-length estimation and detector diagrams
+- GTSS completeness scoring and the Python GTSS validator
+- Server API routes, the Drizzle/Postgres storage layer and the `db:push` script — the app was already
+  entirely client-side
+
+### Changed
+- `packages/openroad` is aliased to its source in Vite and TypeScript, so dev, build and type-check
+  read the same files
+- Unique IDs use an alphanumeric-only alphabet, since a leading `-` would trip the CSV
+  formula-injection guard and change the ID on re-import
+- Map markers are cached by bearing and never change on hover. Swapping a marker's icon makes Leaflet
+  replace its DOM element, which swallowed the click in progress and left marker popups unopenable;
+  hover highlighting is now a separate halo drawn behind the marker
 
 ## [2.0.0] - 2025-02-01
 

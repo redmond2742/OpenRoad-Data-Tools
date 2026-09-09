@@ -1,6 +1,6 @@
-# Building GTSS Builder as a Desktop App
+# Building OpenRoad Data Tools as a Desktop App
 
-Your GTSS Builder web app now has Electron support! This allows you to package it as a downloadable desktop application for Windows, Mac, and Linux.
+Your OpenRoad Data Tools web app now has Electron support! This allows you to package it as a downloadable desktop application for Windows, Mac, and Linux.
 
 ## Quick Start
 
@@ -35,7 +35,7 @@ Then run the Electron app in development mode:
 npm run electron:dev
 ```
 
-This will open your GTSS Builder in a desktop window!
+This will open your OpenRoad Data Tools in a desktop window!
 
 ### 3. Build Desktop Installers
 
@@ -44,24 +44,24 @@ This will open your GTSS Builder in a desktop window!
 npm run package:win
 ```
 This creates:
-- `GTSS Builder Setup.exe` (installer)
-- `GTSS Builder.exe` (portable version)
+- `OpenRoad Data Tools Setup.exe` (installer)
+- `OpenRoad Data Tools.exe` (portable version)
 
 #### For macOS (requires macOS):
 ```bash
 npm run package:mac
 ```
 This creates:
-- `GTSS Builder.dmg` (installer)
-- `GTSS Builder.zip` (portable version)
+- `OpenRoad Data Tools.dmg` (installer)
+- `OpenRoad Data Tools.zip` (portable version)
 
 #### For Linux:
 ```bash
 npm run package:linux
 ```
 This creates:
-- `GTSS Builder.AppImage` (universal Linux app)
-- `gtss-builder_*.deb` (Debian/Ubuntu package)
+- `OpenRoad Data Tools.AppImage` (universal Linux app)
+- `openroad-data-tools_*.deb` (Debian/Ubuntu package)
 
 ### 4. Find Your Built Apps
 

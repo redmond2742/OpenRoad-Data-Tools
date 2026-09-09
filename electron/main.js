@@ -72,7 +72,7 @@ function createWindow() {
       label: 'Help',
       submenu: [
         {
-          label: 'About GTSS Builder',
+          label: 'About OpenRoad Data Tools',
           click: () => {
             const aboutWindow = new BrowserWindow({
               width: 400,
@@ -82,7 +82,7 @@ function createWindow() {
               modal: true,
             });
             aboutWindow.loadURL(
-              `data:text/html,<html><body style="font-family: sans-serif; padding: 40px; text-align: center;"><h2>GTSS Builder</h2><p>General Traffic Signal Specification Builder</p><p>Version 1.0.0</p></body></html>`
+              `data:text/html,<html><body style="font-family: sans-serif; padding: 40px; text-align: center;"><h2>OpenRoad Data Tools</h2><p>Drop pins on a map and export them as CSV</p><p>Version 1.0.0</p></body></html>`
             );
           },
         },

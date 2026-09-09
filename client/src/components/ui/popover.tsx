@@ -1,7 +1,7 @@
 import * as PopoverPrimitive from "@radix-ui/react-popover"
 import * as React from "react"
 
-import { cn } from "gtss"
+import { cn } from "openroad"
 
 const Popover = PopoverPrimitive.Root
 

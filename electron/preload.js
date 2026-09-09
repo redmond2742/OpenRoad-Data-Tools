@@ -10,4 +10,4 @@ contextBridge.exposeInMainWorld('electronAPI', {
   version: process.versions.electron,
 });
 
-console.log('GTSS Builder Desktop App - Preload script loaded');
+console.log('OpenRoad Data Tools Desktop App - Preload script loaded');

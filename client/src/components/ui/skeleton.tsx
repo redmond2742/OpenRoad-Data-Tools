@@ -1,4 +1,4 @@
-import { cn } from "gtss"
+import { cn } from "openroad"
 
 function Skeleton({
   className,

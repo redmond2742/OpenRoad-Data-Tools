@@ -1,9 +1,9 @@
 {
   "include": [
     "client/src/**/*",
-    "packages/gtss/schema/**/*",
+    "packages/openroad/schema/**/*",
     "server/**/*",
-    "packages/gtss"
+    "packages/openroad"
   ],
   "exclude": [
     "node_modules",
@@ -36,8 +36,11 @@
       "@/*": [
         "./client/src/*"
       ],
-      "@schema/*": [
-        "packages/gtss/schema/*"
+      "openroad": [
+        "./packages/openroad/index.ts"
+      ],
+      "openroad/schema": [
+        "./packages/openroad/schema/schema.ts"
       ]
     }
   }

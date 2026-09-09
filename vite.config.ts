@@ -19,8 +19,10 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
-      "@schema": path.resolve(import.meta.dirname, "schema"),
-      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
+      // Resolve the workspace package straight to its source so dev, build and
+      // type-check all read the same files (and package edits hot-reload).
+      // packages/openroad/dist is only built for publishing.
+      "openroad": path.resolve(import.meta.dirname, "packages", "openroad", "index.ts"),
     },
   },
   root: path.resolve(import.meta.dirname, "client"),

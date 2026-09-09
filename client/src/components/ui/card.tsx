@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { cn } from "gtss"
+import { cn } from "openroad"
 
 const Card = React.forwardRef<
   HTMLDivElement,

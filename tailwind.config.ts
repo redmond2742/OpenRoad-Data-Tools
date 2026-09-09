@@ -24,6 +24,38 @@ export default {
         primary: {
           DEFAULT: "var(--primary)",
           foreground: "var(--primary-foreground)",
+          "50": "var(--primary-50)",
+          "100": "var(--primary-100)",
+          "200": "var(--primary-200)",
+          "500": "var(--primary-500)",
+          "600": "var(--primary-600)",
+          "700": "var(--primary-700)",
+        },
+        // Warm neutral ramp (see --grey-* in index.css). Registered here rather
+        // than hand-written as utilities so every shade/variant combination the
+        // components use actually gets generated.
+        grey: {
+          "50": "var(--grey-50)",
+          "100": "var(--grey-100)",
+          "200": "var(--grey-200)",
+          "300": "var(--grey-300)",
+          "400": "var(--grey-400)",
+          "500": "var(--grey-500)",
+          "600": "var(--grey-600)",
+          "700": "var(--grey-700)",
+          "800": "var(--grey-800)",
+        },
+        success: {
+          "50": "var(--success-50)",
+          "100": "var(--success-100)",
+          "600": "var(--success-600)",
+          "700": "var(--success-700)",
+        },
+        warning: {
+          "50": "var(--warning-50)",
+          "100": "var(--warning-100)",
+          "600": "var(--warning-600)",
+          "700": "var(--warning-700)",
         },
         secondary: {
           DEFAULT: "var(--secondary)",

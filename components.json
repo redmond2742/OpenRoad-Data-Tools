@@ -12,9 +12,9 @@
   },
   "aliases": {
     "components": "@/components",
-    "utils": "gtss",
+    "utils": "openroad",
     "ui": "@/components/ui",
-    "lib": "gtss",
+    "lib": "openroad",
     "hooks": "@/hooks"
   }
 }

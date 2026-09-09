@@ -1,4 +1,4 @@
-name: Deploy OpenSignal to GitHub Pages
+name: Deploy OpenRoad Data Tools to GitHub Pages
 
 on:
   push:

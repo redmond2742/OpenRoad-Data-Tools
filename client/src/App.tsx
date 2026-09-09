@@ -1,12 +1,12 @@
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import GTSSBuilder from "@/pages/gtss-builder";
+import OpenRoadBuilder from "@/pages/openroad-builder";
 
 function App() {
   return (
     <TooltipProvider>
       <Toaster />
-      <GTSSBuilder />
+      <OpenRoadBuilder />
     </TooltipProvider>
   );
 }

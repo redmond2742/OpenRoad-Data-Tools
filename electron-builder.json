@@ -1,6 +1,6 @@
 {
-  "appId": "com.gtss.builder",
-  "productName": "GTSS Builder",
+  "appId": "com.openroad.datatools",
+  "productName": "OpenRoad Data Tools",
   "directories": {
     "output": "electron-dist",
     "buildResources": "public"
