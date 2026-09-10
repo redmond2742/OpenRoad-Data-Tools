@@ -1,7 +1,7 @@
 # OpenRoad Data Tools
 
 ## Overview
-OpenRoad Data Tools is a web and desktop application for collecting map points. Users drop pins anywhere on a map and record an ID, coordinates, an approach direction, an optional description and an optional distance. The whole set exports as a single CSV file (`points.csv`), on its own or inside a ZIP, and imports back the same way. Everything runs client-side with no server dependency, so field data can be gathered, shared as a CSV and re-loaded anywhere.
+OpenRoad Data Tools is a web application for collecting map points. Users drop pins anywhere on a map and record an ID, coordinates, an approach direction, an optional description and an optional distance. The whole set exports as a single CSV file (`points.csv`), on its own or inside a ZIP, and imports back the same way. Everything runs client-side with no server dependency, so field data can be gathered, shared as a CSV and re-loaded anywhere.
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.
@@ -28,7 +28,6 @@ The application follows a client-side architecture optimized for browser-based o
 - **Technical Implementations**:
     - **Client-Side Operation**: Complete conversion from server-based APIs to localStorage, making the application fully functional offline without server or database requirements.
     - **State-Based Navigation**: The app uses Zustand state management for navigation instead of URL routing, keeping the URL constant at the root path. This architecture enables perfect static site hosting without requiring server-side routing or rewrite rules. All navigation (Points, Settings, Import, Export) happens through state changes, making the app a true single-page application.
-    - **Desktop Application**: Electron-based desktop app support allows packaging as downloadable installers for Windows, macOS, and Linux. The desktop version shares the same codebase as the web app and works completely offline.
     - **Import/Export System**: Single-file CSV export (`points.csv`) and validation-based import with replace/merge modes. Import matches column names leniently and accepts headerless files, so ordinary spreadsheets load as readily as files this tool produced.
     - **Points View**: A resizable split of interactive map and sortable, searchable table. Clicking the map drops a point; markers are draggable; each point opens a form for direction, description and distance.
     - **Visual Phase Editor**: Interactive map-based tool for configuring phases, including click-to-draw directions, rapid multi-phase creation, and automatic bearing calculation.

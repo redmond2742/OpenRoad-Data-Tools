@@ -41,6 +41,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GTSS completeness scoring and the Python GTSS validator
 - Server API routes, the Drizzle/Postgres storage layer and the `db:push` script — the app was already
   entirely client-side
+- Electron desktop packaging (`electron/`, `electron-builder.json`, the build guide) and its two
+  dependencies, which alone accounted for 272 MB of `node_modules`. The app is browser-only and
+  deploys as a static site
 
 ### Changed
 - `packages/openroad` is aliased to its source in Vite and TypeScript, so dev, build and type-check
